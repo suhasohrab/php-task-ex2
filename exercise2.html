@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      height:890px;
+      width:99%;
+      margin-left:0px;
+      border: 2px solid black;
+      border-bottom: 1px solid black; 
+    }
+    header {
+      color: #fff;
+      text-align: center;
+      padding: 0px 0;
+      border-top: 1px solid black; 
+      border-bottom: 1px solid black; 
+    }
+    nav {
+      text-align: right;
+      padding: 10px 0;
+      border-bottom: 1px solid black;
+    }
+    nav a {
+      color: black;
+      text-decoration: none;
+      padding: 5px 10px;
+      font-size: 25px;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    nav a::after {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        font-weight: bolder;
+        height: 25px; 
+        margin-left: 40px;
+        color:black;
+        background-color: black;
+        vertical-align: middle;
+      }
+      nav a:last-child::after {
+        display: none; 
+      }
+
+    #left-sidebar {
+      width: 17%;
+      background-color: #c9daf8;
+      float: left;
+      margin-top: 0;
+      padding: 20px;
+      height:520px;
+      position: relative;
+      top:-0px;
+      border-right: 1px solid black; 
+    }
+    footer {
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 20px 0;
+      clear: both;
+      height:2px;
+      width:100%;
+      position: relative;
+      bottom:10px;
+      border-top: 1px solid black; 
+    }
+
+  </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" id="update-body">Update Body</a>
+      <a href="#" id="alert-button" style="margin-right:60px">Alert</a>
+    </nav>
+<header>
+  <img src="img.jpg" alt="Header Image" style="width:100%;height:200px">
+</header>
+
+
+<div id="left-sidebar">
+  <p style="font-size:22px;">
+    <b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit. Proin euismod, risus eget placerat ultrices, urna quam interdum libero.    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, risus eget placerat ultrices, urna quam interdum libero.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, risus eget placerat ultrices, urna quam interdum libero.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, risus eget placerat ultrices, urna quam interdum libero.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+  </p>
+</div>
+
+<div id="body-content" style="position:relative; left:40px;">
+  <h3 style="font-size: 24px; font-weight: normal;">Content Page 1</h3>
+</div>
+
+<footer>
+  <p style="position: relative; bottom:12px; font-size:22px; text-align:left; margin-left:20px">&copy; 2024 Muhammad, All Rights Reserved</p>
+  <p style="position: relative; bottom:60px; font-size:22px; text-align:right; margin-right:70px">Design by Muhammad.</p>
+
+</footer>
+
+<script>
+  document.getElementById('alert-button').addEventListener('click', function() {
+    alert('You clicked the alert button!');
+  });
+
+  document.getElementById('update-body').addEventListener('click', function() {
+    document.getElementById('body-content').innerHTML = '<h1>New Body Content</h1><p>This is the updated body content.</p>';
+  });
+</script>
+
+</body>
+</html>
